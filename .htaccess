@@ -2,7 +2,7 @@
 RewriteEngine On
 
 # Set the default index file
-DirectoryIndex index.php index.html
+DirectoryIndex index.html index.php
 
 # Redirect all requests to the index.php file
 RewriteCond %{REQUEST_FILENAME} !-f

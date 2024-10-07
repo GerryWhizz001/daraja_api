@@ -1,0 +1,13 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Set the default index file
+DirectoryIndex index.php index.html
+
+# Redirect all requests to the index.php file
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Custom error document for 404 errors
+ErrorDocument 404 /404.html
